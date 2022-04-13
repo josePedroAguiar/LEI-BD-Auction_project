@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "67a76c58-633c-44d4-8370-e3dd1cd721dc",
+		"name": "BD_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Top 10",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/top10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"top10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ban User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJBZyIsImV4cCI6MTYyMjQ5NjMxOH0.nU9wmPlesNK08gNMdQ4g5gq2FSQk1QUKEHZuSShu8F0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/ban/<username>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"ban",
+								"<username>"
+							],
+							"query": [
+								{
+									"key": "access-token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel auction",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJBZ3VpYXIiLCJleHAiOjE2MjIzOTgxNTB9.NQij8HUMpu6y_GLC7kOtwNl6GQS-ru0NREw-wsIznLo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/cancelar/<id_leilao>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"cancelar",
+								"<id_leilao>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Aguiar\",\r\n    \"password\":\"pass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"password\": \"pass\",\r\n    \"username\": \"Aguiar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Search auctions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leiloes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leiloes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search auction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leiloes/<ean_produto ou descrição>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leiloes",
+								"<ean_produto ou descrição>"
+							],
+							"query": [
+								{
+									"key": "access-token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Write auction mural",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJDIiwiZXhwIjoxNjIyNDc2Nzc5fQ.1yeiCGr3zvWMDxN6u1RupDx6Yf1S_1qIeLOb56lpiE8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"texto\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/mural/<id_leilao>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"mural",
+								"<id_leilao>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"AAAAAA\", \r\n    \"password\": \"1234\", \r\n    \"email\": \"abAc@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJBIiwiZXhwIjoxNjIyNDc2MjA1fQ.PDNco7u2f4OVj2rZ5wm3ZX3N3tvs1lqqVspChZfrAu8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ean\": 1248, \r\n    \"nome_do_produto\": \"melancias\", \r\n    \"quantidade\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"username\":\"AAAAAA\" ,\n\"password\":\"1234\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update auction",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJDYXRyZSIsImV4cCI6MTYyMjM5NTM2N30.rQqSUjK0krbMYLhydzlAX8AK69cfrGGY7y3PqbxGq2A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"AZZIM AZZADO\",\r\n    \"descricao\":\" E complicado\",\r\n    \"detalhes\": \"E complicado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/update/<id_leilao>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"update",
+								"<id_leilao>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New bidding",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJWIiwiZXhwIjoxNjIyNDc4MjQwfQ.y9fuKqWi0XVf7aIV85lgrww2OLClbuzbZFeaITUftoU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/licitar/<id_leilao>/<valor_da_licitacao>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"licitar",
+								"<id_leilao>",
+								"<valor_da_licitacao>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search auction from id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/<id_leilao>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"<id_leilao>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "serch auction from user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJEaW9nbyIsImV4cCI6MTYyMjQwMTQ4M30.eUDbWDSWnJ4DoWuyvrWZP7rquNzG4NJHjbi1ZzIzkbo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao/atividade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao",
+								"atividade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new auction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJaIiwiZXhwIjoxNjIyNDc4MTY0fQ.PrY5vJDrp0wjOzoI19uLEvk67mBf5lS6mij9WxvI3DI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"\",\r\n    \"descricao\":\"\",\r\n    \"detalhes\": \"\",\r\n    \"data_inicial\":\"2021-5-31 17:1O:00\",\r\n    \"data_final\":\"2021-5-31 17:11:00\",\r\n    \"preco_inicial\":22,\r\n    \"preco_corrente\":22,\r\n    \"produtos_ean\":1249\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/dbproj/leilao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dbproj",
+								"leilao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
